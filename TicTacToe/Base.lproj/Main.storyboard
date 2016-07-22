@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Root_View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,282 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="vxE-7q-Gzd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="606"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-E9-UzM">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll1-p8-Ptf">
+                                        <rect key="frame" x="164" y="0.0" width="6" height="250"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynK-W6-pbS">
+                                        <rect key="frame" x="77" y="0.0" width="6" height="250"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtH-lL-wM6">
+                                        <rect key="frame" x="0.0" y="171" width="250" height="6"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dZ-36-Riv">
+                                        <rect key="frame" x="0.0" y="84" width="250" height="6"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SP6-QQ-kcX">
+                                        <rect key="frame" x="171" y="91" width="79" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmI-qu-Yfi">
+                                                <rect key="frame" x="2" y="2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="15s-i1-Qy9" appends="YES" id="OpV-RN-s7g"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOo-fL-osU">
+                                        <rect key="frame" x="84" y="91" width="79" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJQ-Pu-zRx">
+                                                <rect key="frame" x="2" y="2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fSe-rL-96S" appends="YES" id="Snf-cA-uvB"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-Ee-OJj">
+                                        <rect key="frame" x="-3" y="91" width="79" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyw-0E-ZXq">
+                                                <rect key="frame" x="2" y="2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="rZM-hC-LYa" appends="YES" id="DZl-wo-qXY"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qsk-O1-M4z">
+                                        <rect key="frame" x="84" y="4" width="79" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKq-KQ-bc1">
+                                                <rect key="frame" x="2" y="2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="8KF-7d-WMD" appends="YES" id="ARy-t2-SgP"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-xD-kAJ">
+                                        <rect key="frame" x="171" y="4" width="79" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvg-HB-HH6">
+                                                <rect key="frame" x="2" y="2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CIs-xJ-c8b" appends="YES" id="qYF-7i-4Bp"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-0d-ivM">
+                                        <rect key="frame" x="-3" y="178" width="79" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ic-6J-fbM">
+                                                <rect key="frame" x="2" y="-2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Vlf-yl-Bxl" appends="YES" id="9jC-Ha-4sl"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-91-kjX">
+                                        <rect key="frame" x="-3" y="4" width="79" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT4-lH-apd">
+                                                <rect key="frame" x="2" y="2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="r3d-jm-EYb" appends="YES" id="pNs-ZD-jRn"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ry-GT-ERF">
+                                        <rect key="frame" x="171" y="178" width="79" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QF-8P-CaO">
+                                                <rect key="frame" x="2" y="-2" width="75" height="75"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YHA-8v-17h" appends="YES" id="wWf-Au-38R"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="SDn-Nm-1Yk"/>
+                                    <constraint firstAttribute="height" constant="250" id="aBJ-78-xYW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isY-Q7-HhO">
+                                <rect key="frame" x="261" y="353" width="79" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-wN-iAt">
+                                        <rect key="frame" x="2" y="-2" width="75" height="75"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="GRd-29-AhY"/>
+                                            <constraint firstAttribute="height" constant="75" id="y1j-Ea-eJW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="NXJ-wN-iAt" firstAttribute="centerX" secondItem="isY-Q7-HhO" secondAttribute="centerX" id="I4P-mG-0hl"/>
+                                    <constraint firstAttribute="width" constant="79" id="Xpi-On-BRc"/>
+                                    <constraint firstAttribute="height" constant="72" id="qCl-1Y-Ker"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mH4-4f-Sqq" appends="YES" id="fx7-20-ay3"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-OQ-9qp">
+                                <rect key="frame" x="151" y="28" width="299" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="7fc-V2-55n"/>
+                                    <constraint firstAttribute="height" constant="64" id="m3s-Xp-Tyf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="isY-Q7-HhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZzW-gG-pxq"/>
+                            <constraint firstItem="Z0O-E9-UzM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eCd-Ra-9io"/>
+                            <constraint firstItem="k1l-OQ-9qp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lH8-bc-thp"/>
+                            <constraint firstItem="vxE-7q-Gzd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oS2-6e-ChX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="Z0O-E9-UzM" id="BAd-Iv-UOY"/>
+                        <outlet property="label1" destination="LT4-lH-apd" id="3JU-LJ-XIT"/>
+                        <outlet property="label2" destination="KKq-KQ-bc1" id="jbH-DS-hBr"/>
+                        <outlet property="label3" destination="xvg-HB-HH6" id="1mB-Pi-RpH"/>
+                        <outlet property="label4" destination="Zyw-0E-ZXq" id="POk-n8-m7Z"/>
+                        <outlet property="label5" destination="PJQ-Pu-zRx" id="DNy-cS-S5w"/>
+                        <outlet property="label6" destination="RmI-qu-Yfi" id="MvK-nx-EDk"/>
+                        <outlet property="label7" destination="5ic-6J-fbM" id="glj-nF-FAh"/>
+                        <outlet property="label8" destination="NXJ-wN-iAt" id="tHW-Na-Fyh"/>
+                        <outlet property="label9" destination="4QF-8P-CaO" id="PPr-dj-APo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CIs-xJ-c8b">
+                    <connections>
+                        <action selector="onTappedLabel3:" destination="BYZ-38-t0r" id="Pei-oK-70w"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="r3d-jm-EYb">
+                    <connections>
+                        <action selector="onTappedLabel1:" destination="BYZ-38-t0r" id="CGy-3J-ATe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="YHA-8v-17h">
+                    <connections>
+                        <action selector="onTappedLabel9:" destination="BYZ-38-t0r" id="9ax-V9-3OW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rZM-hC-LYa">
+                    <connections>
+                        <action selector="onTappedLabel4:" destination="BYZ-38-t0r" id="4iX-8X-OVN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mH4-4f-Sqq">
+                    <connections>
+                        <action selector="onTappedLabel8:" destination="BYZ-38-t0r" id="wVH-lC-8Co"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fSe-rL-96S">
+                    <connections>
+                        <action selector="onTappedLabel5:" destination="BYZ-38-t0r" id="i6b-S9-49k"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="15s-i1-Qy9">
+                    <connections>
+                        <action selector="onTappedLabel6:" destination="BYZ-38-t0r" id="Dbo-41-mr4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="8KF-7d-WMD">
+                    <connections>
+                        <action selector="onTappedLabel2:" destination="BYZ-38-t0r" id="uEH-lm-6mf"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vlf-yl-Bxl">
+                    <connections>
+                        <action selector="onTappedLabel7:" destination="BYZ-38-t0r" id="TTj-N7-VRY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="440" y="350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="green" width="750" height="1334"/>
+    </resources>
 </document>
